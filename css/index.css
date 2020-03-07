@@ -195,6 +195,10 @@ p {
   color: black;
   font-size: 1.5rem;
 }
+.navigation nav a:hover {
+  color: green;
+  animation: enlarge 1 500ms forwards;
+}
 @media (max-width: 725px) {
   .navigation nav {
     width: 50%;
@@ -203,6 +207,14 @@ p {
 @media (max-width: 500px) {
   .navigation nav {
     width: 75%;
+  }
+}
+@keyframes enlarge {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
   }
 }
 footer {
@@ -314,6 +326,42 @@ footer {
     width: 100%;
   }
   .home .walk .walk-text {
+    width: 100%;
+  }
+}
+.about {
+  padding: 1%;
+}
+.about .intro img {
+  width: 50%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+}
+.about .intro h2 {
+  margin: 1% 0;
+}
+.about .intro p {
+  margin: 1% 0;
+}
+.about .btn {
+  font-size: 2rem;
+  height: 40px;
+  margin: 1% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  color: white;
+  background-color: #22283A;
+  border: 1px solid #22283A;
+  border-radius: 4px;
+}
+.about .btn:hover {
+  color: #22283A;
+  background-color: white;
+}
+@media (max-width: 500px) {
+  .about .btn {
     width: 100%;
   }
 }
