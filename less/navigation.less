@@ -1,1 +1,31 @@
-// Navigation code here
+.navigation{
+    .flexLayout(center, center);
+    flex-direction: column;
+    background-color: @nav-bg;
+
+    h1{
+        margin: @defaultMargin;
+    }
+    nav{
+        margin: @defaultMargin;
+        width: 33%;
+        .flexLayout(space-between, center);
+        a{
+            .defaultA();
+            font-size: @anchorFontSize;
+            &:hover{
+                color: green;
+                animation: enlarge 1 500ms forwards;
+            }
+        }
+        @media @navFix{width: 50%};
+        @media @phone{
+            width: 75%;
+        }
+    }
+}
+
+@keyframes enlarge {
+    0%{transform: scale(1.0);}
+    100%{transform: scale(1.2);}
+}

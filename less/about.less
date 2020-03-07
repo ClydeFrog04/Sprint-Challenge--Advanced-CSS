@@ -1,0 +1,32 @@
+.about{
+    padding: @defaultMargin;
+    .intro{
+        img{
+            width: 50%;
+            margin-bottom: @defaultMargin;
+            border-radius: @headerImgRadius;
+        }
+        h2{
+            margin: @defaultMargin 0;
+        }
+        p{
+            margin: @defaultMargin 0;
+        }
+    }
+    .btn {
+        font-size: 2rem;
+        height: 40px;
+        margin: @defaultMargin 0;
+        .flexLayout(center, center);
+        .btnStyle(40%, white, @btn-bg-color, @btn-bg-color, 4px);
+        &:hover{
+            color: @btn-bg-color;
+            background-color: white;
+        }
+    }
+    @media @phone{
+        .btn{
+            width: 100%;
+        }
+    }
+}
